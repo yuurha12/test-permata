@@ -1,22 +1,21 @@
 # test-permata
 
-#client run on 
+# client run on 
 http://localhost:3000
 
-#server
+# server
 http://localhost:5000
 
-#API documentation with swagger
+# API documentation with swagger
 http://localhost:5000/docs
 
 there's still had an bug on swagger can't authentication
 but work fine on postman etc
 
-#API prefix
+# API prefix
 http://localhost:5000/api/v1
 
-#API method
-#ROUTE
+# API method
 router.get("/user/:id", userController.getUserById);
 router.put("/user/:id", auth, userController.updateUserById);
 router.delete("/user/:id", userController.deleteUserById);
@@ -37,5 +36,5 @@ router.get("/task/:id", auth, taskController.getTaskById);
 router.patch("/task/:id", auth, taskController.updateTaskById);
 router.delete("/task/:id", auth, taskController.deleteTaskById);
 
-#USAGE example
+# USAGE example
 http://localhost:5000/api/v1/users
