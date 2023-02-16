@@ -1,5 +1,12 @@
 # test-permata
 
+# setup
+clone the project
+then npm install
+
+# Run
+npm start on client directory and server directory
+
 # client run on 
 http://localhost:3000
 
