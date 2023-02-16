@@ -31,15 +31,23 @@ router.post("/login", userAuth.login);
 router.post("/checkAuth", auth, userAuth.checkAuth);
 
 router.post("/category", auth, categoryController.createCategory);
+
 router.get("/categories", auth, categoryController.getCategories);
+
 router.get("/category/:id", auth, categoryController.getCategoryById);
+
 router.patch("/category/:id", auth, categoryController.updateCategoryById);
+
 router.delete("/category/:id", auth, categoryController.deleteCategoryById);
 
 router.post("/task", auth, taskController.createTask);
+
 router.get("/tasks", auth, taskController.getTasks);
+
 router.get("/task/:id", auth, taskController.getTaskById);
+
 router.patch("/task/:id", auth, taskController.updateTaskById);
+
 router.delete("/task/:id", auth, taskController.deleteTaskById);
 
 # USAGE example
