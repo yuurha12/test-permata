@@ -17,11 +17,17 @@ http://localhost:5000/api/v1
 
 # API method
 router.get("/user/:id", userController.getUserById);
+
 router.put("/user/:id", auth, userController.updateUserById);
+
 router.delete("/user/:id", userController.deleteUserById);
+
 router.get("/users", userController.getAllUsers);
+
 router.post("/register", userAuth.register);
+
 router.post("/login", userAuth.login);
+
 router.post("/checkAuth", auth, userAuth.checkAuth);
 
 router.post("/category", auth, categoryController.createCategory);
