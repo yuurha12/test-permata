@@ -5,7 +5,7 @@ import "../style/Card.css"
 import Auth from "../components/auth/auth";
 import Hero from "../components/hero/Hero";
 
-import Card1 from "../components/card/Todo";
+import Todo from "../components/card/Todo";
 
 function Landing() {
   return (
@@ -19,7 +19,7 @@ function Landing() {
             </Form>
           </Col>
         </Row>
-        <Card1 />
+        <Todo />
       </Container>
     </div>
   );
