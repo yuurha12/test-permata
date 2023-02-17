@@ -1,8 +1,11 @@
 # test-permata
 
 # setup
-clone the project
-then npm install
+clone the project then 
+
+git clone https://github.com/yuurha12/test-permata.git 
+
+npm install
 
 # Run
 npm start on client directory and server directory
