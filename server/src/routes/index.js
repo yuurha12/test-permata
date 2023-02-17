@@ -13,7 +13,7 @@ router.get("/users", userController.getAllUsers);
 
 router.post("/register", userAuth.register);
 router.post("/login", userAuth.login);
-router.post("/checkAuth", auth, userAuth.checkAuth);
+router.get("/checkAuth",auth, userAuth.checkAuth);
 
 router.post("/category", auth, categoryController.createCategory);
 router.get("/categories", auth, categoryController.getCategories);

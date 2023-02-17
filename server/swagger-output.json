@@ -201,7 +201,7 @@
       }
     },
     "/checkAuth": {
-      "post": {
+      "get": {
         "description": "",
         "parameters": [
           {
