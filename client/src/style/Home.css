@@ -1,0 +1,40 @@
+    .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    margin-top: 100px;
+
+  }
+  
+  .title {
+    font-size: 6rem;
+    background: -webkit-linear-gradient(#ff355e, #8d35ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 400px;
+    max-width: 80%;
+  }
+
+  

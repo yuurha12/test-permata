@@ -121,7 +121,6 @@ const login = async (req, res) => {
 const checkAuth = async (req, res) => {
   try {
     const id = req.user.id;
-
     const dataUser = await User.findOne({ _id: id });
 
     if (!dataUser) {

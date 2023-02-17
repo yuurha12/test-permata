@@ -1,0 +1,5 @@
+.form-control-place {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
