@@ -26,5 +26,6 @@ router.get("/tasks", auth, taskController.getTasks);
 router.get("/task/:id", auth, taskController.getTaskById);
 router.patch("/task/:id", auth, taskController.updateTaskById);
 router.delete("/task/:id", auth, taskController.deleteTaskById);
+router.get("/taskbycategory", auth, taskController.findTaskBydCategory)
 
 module.exports = router;

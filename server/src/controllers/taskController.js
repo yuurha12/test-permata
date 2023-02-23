@@ -2,6 +2,27 @@ const Task = require("../models/task");
 const Category = require("../models/category");
 const User = require("../models/user");
 
+
+const findTaskBydCategory = async (req, res) =>
+{
+  try {
+    const userId = req.user.id
+    const dataUser = await User.findOne({_id: userId })
+   
+    const taskName = req.body.task;
+    
+    const task = await Task.find({task: taskName})
+
+    const categories = await Category.findOne({ user: dataUser, task: task });
+    if (categories.length === 0) {
+      return res.status(404).json({ message: "No tasks found for the specified category" });
+    }
+    res.json(task);
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+}
+
 // create a new task
 const createTask = async (req, res) => {
   try {
@@ -140,4 +161,5 @@ module.exports = {
   getTaskById,
   updateTaskById,
   deleteTaskById,
+  findTaskBydCategory,
 };

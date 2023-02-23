@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { API, setAuthToken } from "./config/api";
 
 //page
@@ -15,10 +15,11 @@ function App() {
   const [state, dispatch] = useContext(UserContext);
   const navigate = useNavigate()
 
+  if (localStorage.token) {
+    setAuthToken(localStorage.token);
+  }
+  
   useEffect(() => {
-    if (localStorage.token) {
-      setAuthToken(localStorage.token);
-    }
     if (state.isLogin === false && isLoading) {
       navigate("/")
     }else {
